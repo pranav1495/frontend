@@ -5,18 +5,6 @@ import "./Home.css";
 
 function Home() {
   const navigate = useNavigate();
-  const [greeting, setGreeting] = useState("");
-
-  useEffect(() => {
-    const currentHour = new Date().getHours();
-    if (currentHour < 12) {
-      setGreeting("Good Morning! 🌅");
-    } else if (currentHour < 17) {
-      setGreeting("Good Afternoon! ☀️");
-    } else {
-      setGreeting("Good Evening! 🌙");
-    }
-  }, []);
 
   // Logout function
   const handleLogout = () => {
@@ -28,13 +16,6 @@ function Home() {
   return (
     <>
       <div className="home-container d-flex flex-column align-items-center text-center p-3">
-        
-        {/* Greeting Section */}
-        <h2 className="greeting-text">{greeting}</h2>
-        <h4>Welcome to <span className="brand-name">Park Visits</span></h4>
-        <p className="lead">Your AI-powered visitor management system.</p>
-
-        {/* Features Section */}
         <div className="container mt-4">
           <div className="row g-4">
             <div className="col-md-6 col-sm-12">
