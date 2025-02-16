@@ -22,11 +22,11 @@ function Login({ onLogin }) {
     setErrorMessage("");
 
     try {
-      console.log("Sending request to:", "http://localhost:5000/login");
+      console.log("Sending request to:", "https://backend-7svj.onrender.com/login");
       console.log("Username:", formData.username);
       console.log("Password:", formData.password);
 
-      const response = await axios.post("http://localhost:5000/login", {
+      const response = await axios.post("https://backend-7svj.onrender.com/login", {
         username: formData.username,
         password: formData.password,
       });
@@ -46,7 +46,7 @@ function Login({ onLogin }) {
     <div className="container d-flex justify-content-center align-items-center vh-100">
       <div className="card shadow-lg p-4" style={{ maxWidth: "400px", width: "100%" }}>
         <div className="text-center">
-          <h2 className="mb-3">Park Visits</h2>
+          <h2 className="mb-3">Park Visits</h2>alhost:5000/logi
         </div>
 
         {errorMessage && <div className="alert alert-danger">{errorMessage}</div>}
