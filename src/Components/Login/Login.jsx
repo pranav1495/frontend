@@ -46,7 +46,7 @@ function Login({ onLogin }) {
     <div className="container d-flex justify-content-center align-items-center vh-100">
       <div className="card shadow-lg p-4" style={{ maxWidth: "400px", width: "100%" }}>
         <div className="text-center">
-          <h2 className="mb-3">Park Visits</h2>alhost:5000/logi
+          <h2 className="mb-3">Park Visits</h2>
         </div>
 
         {errorMessage && <div className="alert alert-danger">{errorMessage}</div>}
