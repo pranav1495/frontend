@@ -22,11 +22,11 @@ function Login({ onLogin }) {
     setErrorMessage("");
 
     try {
-      console.log("Sending request to:", "https://backend-7svj.onrender.com/login");
+      console.log("Sending request to:", "https://backend-1-ddyq.onrender.com/login");
       console.log("Username:", formData.username);
       console.log("Password:", formData.password);
 
-      const response = await axios.post("https://backend-7svj.onrender.com/login", {
+      const response = await axios.post("https://backend-1-ddyq.onrender.com/login", {
         username: formData.username,
         password: formData.password,
       });

@@ -28,7 +28,7 @@ function Register() {
     }
   
     try {
-      const response = await axios.post("https://backend-7svj.onrender.com/register", {
+      const response = await axios.post("https://backend-1-ddyq.onrender.com/register", {
         username: formData.username,
         password: formData.password,
       });
