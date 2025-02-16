@@ -1,0 +1,29 @@
+.home-container {
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+.brand-name {
+  font-weight: bold;
+  color: #ffd700;
+}
+
+.feature-card {
+  background: #f8f9fa;
+  border-radius: 12px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-in-out;
+}

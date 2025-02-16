@@ -1,0 +1,103 @@
+/* Login & Register Common Styles */
+.login-page, .register-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f3f4f6;
+}
+
+.login-container, .register-container {
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 350px;
+}
+
+.app-icon {
+  width: 60px;
+  margin-bottom: 15px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #2563eb;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+input:focus {
+  border-color: #2563eb;
+  outline: none;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 15px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1e40af;
+}
+
+/* Error Message */
+.error-text {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/* Forgot Password & Sign-up Links */
+.forgot-password, .login-link {
+  margin-top: 15px;
+}
+
+.forgot-password a, .login-link a {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.forgot-password a:hover, .login-link a:hover {
+  text-decoration: underline;
+}
+
+body {
+  background-color: #f8f9fa; /* Light Grey Background */
+}
+
+.card {
+  border-radius: 12px;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.app-icon {
+  width: 60px;
+}
+
