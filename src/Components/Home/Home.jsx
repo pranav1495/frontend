@@ -20,18 +20,23 @@ function Home() {
 
   return (
     <>
-      <div className="home-container">
+      <div className="home-container d-flex flex-column align-items-center text-center p-3">
+        
+        {/* Greeting Section */}
+        <h2 className="greeting-text">{greeting}</h2>
+        <h4>Welcome to <span className="brand-name">Park Visits</span></h4>
+        <p className="lead">Your AI-powered visitor management system.</p>
 
         {/* Features Section */}
-        <div className="container mt-5">
-          <div className="row text-center">
-            <div className="col-md-4">
+        <div className="container mt-4">
+          <div className="row g-4">
+            <div className="col-md-6 col-sm-12">
               <div className="feature-card p-4 fade-in">
                 <h3>Smart QR Entry 🎟️</h3>
                 <p>Seamless check-ins with AI-generated QR codes.</p>
               </div>
             </div>
-            <div className="col-md-4">
+            <div className="col-md-6 col-sm-12">
               <div className="feature-card p-4 fade-in">
                 <h3>Real-Time AI Monitoring 📊</h3>
                 <p>Track visitor activity with live analytics.</p>
@@ -39,7 +44,15 @@ function Home() {
             </div>
           </div>
         </div>
-        </div>
+
+        {/* CTA Button */}
+        <button 
+          className="btn btn-primary mt-3 px-4 py-2 fw-bold fade-in"
+          onClick={() => navigate("/register")}
+        >
+          Get Started 🚀
+        </button>
+      </div>
     </>
   );
 }
