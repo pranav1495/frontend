@@ -53,3 +53,15 @@
     width: 100%;
   }
 }
+
+.logout-button {
+  width: 150px;
+  font-size: 18px;
+  padding: 10px;
+  border-radius: 8px;
+  transition: background 0.3s ease-in-out;
+}
+
+.logout-button:hover {
+  background: #c82333;
+}

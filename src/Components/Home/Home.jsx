@@ -18,6 +18,13 @@ function Home() {
     }
   }, []);
 
+  // Logout function
+  const handleLogout = () => {
+    // Clear session storage or authentication token if used
+    localStorage.removeItem("authToken"); // If using JWT
+    navigate("/login"); // Redirect to Login page
+  };
+
   return (
     <>
       <div className="home-container d-flex flex-column align-items-center text-center p-3">
@@ -45,13 +52,11 @@ function Home() {
           </div>
         </div>
 
-        {/* CTA Button */}
-        <button 
-          className="btn btn-primary mt-3 px-4 py-2 fw-bold fade-in"
-          onClick={() => navigate("/register")}
-        >
-          Get Started 🚀
+        {/* Logout Button */}
+        <button className="btn btn-danger mt-4 logout-button" onClick={handleLogout}>
+          Logout 🚪
         </button>
+
       </div>
     </>
   );
