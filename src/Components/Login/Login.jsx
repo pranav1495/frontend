@@ -22,7 +22,11 @@ function Login({ onLogin }) {
     setErrorMessage("");
 
     try {
-      const response = await axios.post("https://backend-7svj.onrender.com0/login", {
+      console.log("Sending request to:", "http://localhost:5000/login");
+      console.log("Username:", formData.username);
+      console.log("Password:", formData.password);
+
+      const response = await axios.post("http://localhost:5000/login", {
         username: formData.username,
         password: formData.password,
       });
@@ -30,6 +34,7 @@ function Login({ onLogin }) {
       if (response.status === 200) {
         alert("✅ Login Successful");
         onLogin();
+        localStorage.setItem("isAuthenticated", "true");
         navigate("/home");
       }
     } catch (error) {
