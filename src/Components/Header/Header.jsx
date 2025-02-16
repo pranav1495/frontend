@@ -10,8 +10,7 @@ const Header = ({ isAuthenticated, onLogout, userRole }) => {
 
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-primary shadow">
-      <div className="container">
-        {/* Logo & Website Type */}
+      <div className="container-fluid">
         <Link className="navbar-brand d-flex align-items-center" to="/">
           <img src={logo} alt="Park Visits" className="logo" />
           <span className="ms-2 fw-bold">Park Visits</span>
@@ -21,7 +20,6 @@ const Header = ({ isAuthenticated, onLogout, userRole }) => {
           <span className="navbar-toggler-icon"></span>
         </button>
 
-        {/* Navigation Links */}
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
