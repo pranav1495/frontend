@@ -63,52 +63,53 @@ const Header = ({ isAuthenticated, onLogout, userRole }) => {
                     ? "Staff Dashboard"
                     : "Visitor Dashboard"}
                 </button>
-                {dropdownOpen && (
-                  <ul className="dropdown-menu dropdown-menu-end show animated fadeIn">
-                    {userRole === "admin" && (
-                      <>
-                        <li>
-                          <Link className="dropdown-item" to="/manage-visitors">
-                            Manage Visitors
-                          </Link>
-                        </li>
-                        <li>
-                          <Link className="dropdown-item" to="/reports">
-                            View Reports
-                          </Link>
-                        </li>
-                      </>
-                    )}
-                    {userRole === "staff" && (
-                      <>
-                        <li>
-                          <Link className="dropdown-item" to="/check-in">
-                            Check-in Visitors
-                          </Link>
-                        </li>
-                        <li>
-                          <Link className="dropdown-item" to="/visitor-logs">
-                            Visitor Logs
-                          </Link>
-                        </li>
-                      </>
-                    )}
-                    {userRole === "visitor" && (
-                      <>
-                        <li>
-                          <Link className="dropdown-item" to="/book-appointment">
-                            Book Appointment
-                          </Link>
-                        </li>
-                        <li>
-                          <Link className="dropdown-item" to="/visit-history">
-                            Visit History
-                          </Link>
-                        </li>
-                      </>
-                    )}
-                  </ul>
-                )}
+                <ul
+                  className={`dropdown-menu dropdown-menu-end ${dropdownOpen ? "show" : ""}`}
+                  aria-labelledby="navbarDropdown"
+                >
+                  {userRole === "admin" && (
+                    <>
+                      <li>
+                        <Link className="dropdown-item" to="/manage-visitors">
+                          Manage Visitors
+                        </Link>
+                      </li>
+                      <li>
+                        <Link className="dropdown-item" to="/reports">
+                          View Reports
+                        </Link>
+                      </li>
+                    </>
+                  )}
+                  {userRole === "staff" && (
+                    <>
+                      <li>
+                        <Link className="dropdown-item" to="/check-in">
+                          Check-in Visitors
+                        </Link>
+                      </li>
+                      <li>
+                        <Link className="dropdown-item" to="/visitor-logs">
+                          Visitor Logs
+                        </Link>
+                      </li>
+                    </>
+                  )}
+                  {userRole === "visitor" && (
+                    <>
+                      <li>
+                        <Link className="dropdown-item" to="/book-appointment">
+                          Book Appointment
+                        </Link>
+                      </li>
+                      <li>
+                        <Link className="dropdown-item" to="/visit-history">
+                          Visit History
+                        </Link>
+                      </li>
+                    </>
+                  )}
+                </ul>
               </div>
               <button className="btn btn-light ms-3 fw-bold" onClick={onLogout}>
                 Logout
@@ -124,5 +125,4 @@ const Header = ({ isAuthenticated, onLogout, userRole }) => {
     </nav>
   );
 };
-
 export default Header;

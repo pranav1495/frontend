@@ -1,18 +1,20 @@
-/* Navbar Styling */
 .navbar {
     width: 100%;
     padding: 10px 15px;
     font-size: 1rem;
-    background: linear-gradient(90deg, #242627, #202121); /* Grey gradient background */
+    background: linear-gradient(90deg, #242627, #202121);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     position: fixed;
     top: 0;
     left: 0;
     z-index: 1000;
+    transition: background 0.3s ease;
 }
+
 body {
     padding-top: 70px;
 }
+
 .logo {
     height: 40px;
     border-radius: 50%;
@@ -22,6 +24,7 @@ body {
 .logo:hover {
     transform: scale(1.05);
 }
+
 .navbar-nav .nav-link {
     color: white !important;
     font-weight: 500;
@@ -34,14 +37,17 @@ body {
     color: #ffd700 !important;
     background: rgba(255, 255, 255, 0.2);
 }
+
 .dropdown-menu {
     background: white;
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     min-width: 180px;
-    right: 0; 
+    right: 0;
     left: auto;
+    transition: all 0.3s ease-in-out;
 }
+
 .dropdown-item {
     font-weight: 500;
     padding: 10px;
@@ -62,15 +68,18 @@ body {
     background: rgba(255, 0, 0, 0.1);
     color: darkred;
 }
+
 @media (max-width: 992px) {
     .navbar-nav {
         text-align: center;
     }
+
     .navbar-nav .nav-item {
         margin-bottom: 10px;
     }
+
     .dropdown-menu {
-        width: 100%; 
+        width: 100%;
     }
 }
 
@@ -115,6 +124,7 @@ body {
     background-color: #218838;
     color: white;
 }
+
 .navbar-nav .nav-link.nav-hover:hover {
     color: #ff8a00;
 }
@@ -126,4 +136,23 @@ body {
 
 .d-flex.align-items-center .btn-light {
     margin-left: 15px;
+}
+
+.navbar-brand:hover .logo {
+    transform: scale(1.1);
+}
+
+.dropdown-menu.show {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
