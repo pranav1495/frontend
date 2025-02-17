@@ -5,8 +5,8 @@ import Home from "./Components/Home/Home";
 import Login from "./Components/Login/Login";
 import Register from "./Components/Login/Register";
 import Footer from "./Components/Footer/Footer";
-import { Front } from "./Components/Front/Front";
-import Features from "./Components/Home/Features";
+import { Front } from "./Components/Front/Front"; // Import Front.jsx
+import Features from "./Components/Home/Features"; // Import Sidebar.jsx
 import Sidebar from "./Components/Sidebar/SideBar";
 
 const getAuthStatus = () => localStorage.getItem("isAuthenticated") === "true";
