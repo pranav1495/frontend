@@ -1,7 +1,7 @@
 /* Footer Styling */
 .footer {
   position: fixed; /* Fix it at the bottom */
-  bottom: 0;       /* Place at the bottom of the page */
+  bottom: 20px;       /* Place at the bottom of the page */
   left: 0;         /* Align to the left */
   width: 100%;     /* Full width of the screen */
   background: linear-gradient(135deg, #343a40, #4b4b4b); /* Gradient background */
@@ -20,7 +20,7 @@
   font-size: 1.4rem;
   margin-bottom: 12px;
   font-weight: 700;
-  text-transform: uppercase; /* All caps for a modern look */
+  text-transform: uppercase;
   letter-spacing: 1px;
 }
 
