@@ -33,11 +33,6 @@ function Home() {
           </div>
         </div>
 
-        {/* Logout Button */}
-        <button className="btn btn-danger mt-4 logout-button" onClick={handleLogout}>
-          Logout 🚪
-        </button>
-
       </div>
     </>
   );
