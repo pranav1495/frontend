@@ -1,13 +1,13 @@
 import { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import "./App.css";
-import Header from "./Components/Header/Header";
 import Home from "./Components/Home/Home";
 import Login from "./Components/Login/Login";
 import Register from "./Components/Login/Register";
 import Footer from "./Components/Footer/Footer";
-import { Front } from "./Components/Front/Front"; // Import Front.jsx
+import { Front } from "./Components/Front/Front";
 import Features from "./Components/Home/Features";
+import Sidebar from "./Components/Sidebar/SideBar";
 
 const getAuthStatus = () => localStorage.getItem("isAuthenticated") === "true";
 
@@ -26,17 +26,19 @@ function App() {
 
   return (
     <Router>
-      {isAuthenticated && <Header isAuthenticated={isAuthenticated} onLogout={handleLogout} />}
-
-      <Routes>
-        <Route path="/" element={isAuthenticated ? <Navigate to="/home" /> : <Front />} /> 
-        <Route path="/home" element={isAuthenticated ? <Home onLogout={handleLogout} /> : <Navigate to="/login" />} /> 
-        <Route path="/login" element={<Login onLogin={() => setIsAuthenticated(true)} />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/features" element={<Features />} />
-      </Routes>
-
-      {isAuthenticated && <Footer />}
+      <div className="app-container">
+        <Sidebar isAuthenticated={isAuthenticated} onLogout={handleLogout} />
+        <div className="main-content">
+          <Routes>
+            <Route path="/" element={isAuthenticated ? <Navigate to="/home" /> : <Front />} />
+            <Route path="/home" element={isAuthenticated ? <Home onLogout={handleLogout} /> : <Navigate to="/login" />} />
+            <Route path="/login" element={<Login onLogin={() => setIsAuthenticated(true)} />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/features" element={<Features />} />
+          </Routes>
+          {isAuthenticated && <Footer />}
+        </div>
+      </div>
     </Router>
   );
 }
