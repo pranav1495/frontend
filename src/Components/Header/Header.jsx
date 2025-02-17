@@ -48,8 +48,14 @@ const Header = ({ isAuthenticated, onLogout, userRole }) => {
             <li className="nav-item">
               <Link className="nav-link nav-hover" to="/contact">Contact</Link>
             </li>
-            <li><Link className="dropdown-item" onClick={onLogout} to="/login">Logout</Link></li>
-            </ul>
+            {isAuthenticated && (
+              <li className="nav-item">
+                <Link className="nav-link nav-hover" onClick={onLogout} to="/login">
+                  Logout
+                </Link>
+              </li>
+            )}
+          </ul>
         </div>
       </div>
     </nav>
