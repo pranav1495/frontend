@@ -6,7 +6,7 @@ import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
 const Footer = () => {
   return (
     <footer className="footer bg-dark text-light">
-      <div className="container-fluid text-center py-5">
+      <div className="container-fluid text-justify py-5">
         <div className="row">
           {/* Brand Section */}
           <div className="col-md-4 mb-4 mb-md-0">
