@@ -1,23 +1,11 @@
-import React, { useState, useEffect, useRef } from "react";
+import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Header.css";
 import logo from "../../assets/icon.png";
 
-const Header = ({ isAuthenticated, onLogout, userRole }) => {
+const Header = ({ isAuthenticated, onLogout }) => {
   const navigate = useNavigate();
-  const [dropdownOpen, setDropdownOpen] = useState(false);
-  const dropdownRef = useRef(null);
-
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        setDropdownOpen(false);
-      }
-    };
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
 
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-gradient shadow-lg fixed-top">
@@ -51,34 +39,9 @@ const Header = ({ isAuthenticated, onLogout, userRole }) => {
           </ul>
           {isAuthenticated ? (
             <div className="d-flex align-items-center">
-              {/* Dropdown Menu */}
-              <div className="dropdown" ref={dropdownRef}>
-                <button
-                  className="btn btn-light ms-3 fw-bold dropdown-toggle"
-                  type="button"
-                  onClick={() => setDropdownOpen(!dropdownOpen)}
-                  id="dropdownMenuButton"
-                  data-bs-toggle="dropdown"
-                  aria-expanded={dropdownOpen}
-                >
-                  {userRole === "Admin" ? "Admin" : "User"}
-                </button>
-                {dropdownOpen && (
-                  <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    {userRole === "Admin" ? (
-                      <>
-                        <li><Link className="dropdown-item" to="/admin">Admin Panel</Link></li>
-                        <li><Link className="dropdown-item" to="/settings">Settings</Link></li>
-                      </>
-                    ) : (
-                      <>
-                        <li><Link className="dropdown-item" to="/profile">Profile</Link></li>
-                      </>
-                    )}
-                    <li><Link className="dropdown-item" onClick={onLogout} to="/login">Logout</Link></li>
-                  </ul>
-                )}
-              </div>
+              <button className="btn btn-light ms-3 fw-bold" onClick={onLogout}>
+                Logout
+              </button>
             </div>
           ) : (
             <button className="btn btn-light ms-3 fw-bold" onClick={() => navigate("/login")}>
