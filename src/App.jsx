@@ -30,6 +30,7 @@ function App() {
   const handleLogout = () => {
     setIsAuthenticated(false);
     localStorage.removeItem("isAuthenticated");
+    navigate("/login");
   };
 
   if (loading) {
@@ -41,7 +42,7 @@ function App() {
       <div className="app-container">
         {isAuthenticated && (
           <>
-            <Header isAuthenticated={isAuthenticated} onLogout={handleLogout} />
+            <Header isAuthenticated={isAuthenticated} onLogout={handleLogout}  />
             <div className="main-content">
               {/* Content rendered only when authenticated */}
               <Routes>
