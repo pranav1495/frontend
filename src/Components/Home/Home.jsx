@@ -15,24 +15,25 @@ function Home() {
 
   return (
     <>
-      <div className="home-container d-flex flex-column align-items-center text-center p-3">
+      <div className="home-container">
+        <div className="greeting-text">Welcome to Park Visits</div>
+
         <div className="container mt-4">
           <div className="row g-4">
             <div className="col-md-6 col-sm-12">
-              <div className="feature-card p-4 fade-in">
+              <div className="feature-card fade-in">
                 <h3>Smart QR Entry 🎟️</h3>
                 <p>Seamless check-ins with AI-generated QR codes.</p>
               </div>
             </div>
             <div className="col-md-6 col-sm-12">
-              <div className="feature-card p-4 fade-in">
+              <div className="feature-card fade-in">
                 <h3>Real-Time AI Monitoring 📊</h3>
                 <p>Track visitor activity with live analytics.</p>
               </div>
             </div>
           </div>
         </div>
-
       </div>
     </>
   );

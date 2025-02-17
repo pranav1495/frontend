@@ -4,29 +4,49 @@
   align-items: center;
   text-align: center;
   padding: 20px;
+  background: linear-gradient(135deg, #007bff, #00d4ff); /* Gradient background */
+  min-height: 100vh;
+  justify-content: center;
 }
 
 .greeting-text {
-  font-size: 24px;
+  font-size: 30px;
   font-weight: bold;
-  color: #333;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
 }
 
 .brand-name {
-  color: #007bff;
+  color: #ffd700;
   font-weight: bold;
 }
 
 .feature-card {
-  background: #f8f9fa;
+  background: #ffffff;
   border-radius: 12px;
-  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
   text-align: center;
-  transition: transform 0.3s ease-in-out;
+  padding: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeIn 1s ease-in-out;
 }
 
 .feature-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-10px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+.feature-card h3 {
+  font-size: 1.8rem;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.feature-card p {
+  color: #555;
+  font-size: 1rem;
 }
 
 .fade-in {
@@ -41,27 +61,104 @@
 /* Mobile Styles */
 @media (max-width: 768px) {
   .greeting-text {
-    font-size: 20px;
+    font-size: 24px;
   }
 
   .feature-card {
-    padding: 15px;
-    font-size: 14px;
-  }
-
-  .btn {
-    width: 100%;
+    padding: 20px;
+    font-size: 15px;
   }
 }
 
+/* Logout Button */
 .logout-button {
-  width: 150px;
-  font-size: 18px;
-  padding: 10px;
+  width: 180px;
+  font-size: 20px;
+  padding: 12px 20px;
+  background-color: #28a745;
+  color: white;
   border-radius: 8px;
-  transition: background 0.3s ease-in-out;
+  border: none;
+  transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+  cursor: pointer;
 }
 
 .logout-button:hover {
-  background: #c82333;
+  background-color: #218838;
+  transform: scale(1.05);
+}
+
+.logout-button:focus {
+  outline: none;
+}
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(135deg, #007bff, #00d4ff); /* Gradient background */
+  min-height: 100vh;
+  justify-content: center;
+}
+
+.greeting-text {
+  font-size: 30px;
+  font-weight: bold;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.brand-name {
+  color: #ffd700;
+  font-weight: bold;
+}
+
+.feature-card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+.feature-card h3 {
+  font-size: 1.8rem;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.feature-card p {
+  color: #555;
+  font-size: 1rem;
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .greeting-text {
+    font-size: 24px;
+  }
+
+  .feature-card {
+    padding: 20px;
+    font-size: 15px;
+  }
 }
