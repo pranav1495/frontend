@@ -2,8 +2,8 @@
 .footer {
   position: fixed; /* Fix it at the bottom */
   bottom: 0;
-  top:20px;       /* Place at the bottom of the page */
-  left: 0;         /* Align to the left */
+  top:600px;       /* Place at the bottom of the page */
+  left: 0;         
   width: 100%;     /* Full width of the screen */
   background: linear-gradient(135deg, #343a40, #4b4b4b); /* Gradient background */
   color: white;
