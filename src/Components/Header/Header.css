@@ -1,88 +1,126 @@
-/* Navbar Styling */
-.navbar {
-    width: 100%;
-    padding: 10px 15px;
-    font-size: 1rem;
-    background: linear-gradient(90deg, #007bff, #0056b3);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-}
-
-/* Ensure content does not overlap the fixed header */
 body {
-    padding-top: 70px; /* Adjust based on navbar height */
-}
-
-/* Logo */
-.logo {
-    height: 40px; /* Compact size */
-    border-radius: 50%;
-    transition: transform 0.3s ease-in-out;
-}
-
-.logo:hover {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .navbar {
+    background: linear-gradient(45deg, #6a11cb, #2575fc);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff !important;
+    transition: transform 0.3s ease;
+  }
+  
+  .navbar-brand:hover {
+    transform: scale(1.1);
+  }
+  
+  .navbar-toggler-icon {
+    background-color: #fff;
+  }
+  
+  .nav-link {
+    color: #f5f5f5 !important;
+    font-size: 1rem;
+    margin-right: 1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-link:hover {
+    color: #f8c746 !important;
+  }
+  
+  .navbar-nav {
+    font-weight: 600;
+  }
+  
+  .dropdown-toggle {
+    color: #fff;
+    background-color: #5c6bc0;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+  }
+  
+  .dropdown-toggle:hover {
+    background-color: #283593;
     transform: scale(1.05);
-}
-
-/* Navbar Links */
-.navbar-nav .nav-link {
-    color: white !important;
-    font-weight: 500;
-    padding: 8px 12px;
-    transition: all 0.3s ease-in-out;
-    border-radius: 8px;
-}
-
-.navbar-nav .nav-link:hover {
-    color: #ffd700 !important;
-    background: rgba(255, 255, 255, 0.2);
-}
-
-/* Dropdown Menu */
-.dropdown-menu {
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    min-width: 180px;
-    right: 0; /* Aligns properly */
-    left: auto;
-}
-
-/* Dropdown Items */
-.dropdown-item {
-    font-weight: 500;
-    padding: 10px;
-    transition: all 0.3s ease-in-out;
-}
-
-.dropdown-item:hover {
-    background: #007bff;
-    color: white;
-}
-
-/* Logout Button */
-.dropdown-item.text-danger {
-    color: red;
-    font-weight: bold;
-}
-
-.dropdown-item.text-danger:hover {
-    background: rgba(255, 0, 0, 0.1);
-    color: darkred;
-}
-
-/* Mobile Responsiveness */
-@media (max-width: 992px) {
+  }
+  
+  .dropdown-menu {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(135deg, #ff8a00, #e52e71);
+  }
+  
+  .dropdown-item {
+    color: #fff !important;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .dropdown-item:hover {
+    background-color: #f8c746;
+    color: #000 !important;
+  }
+  
+  .dropdown-divider {
+    border-color: #f5f5f5;
+  }
+  
+  .btn-light {
+    background-color: #fff;
+    color: #5c6bc0;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-light:hover {
+    background-color: #f8c746;
+    color: #fff;
+  }
+  
+  .text-gradient {
+    background: -webkit-linear-gradient(45deg, #ff8a00, #e52e71);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; 
+  }
+  
+  
+  .navbar-toggler {
+    border: none;
+  }
+  
+  .navbar-toggler-icon {
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    transition: transform 0.3s ease;
+  }
+  
+  .navbar-toggler:focus .navbar-toggler-icon {
+    transform: rotate(90deg);
+  }
+  
+  .navbar-nav {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  
+  @media (max-width: 767px) {
     .navbar-nav {
-        text-align: center;
-    }
-    .navbar-nav .nav-item {
-        margin-bottom: 10px;
+      text-align: center;
     }
     .dropdown-menu {
-        width: 100%; /* Ensures it fits in small screens */
+      border-radius: 5px;
     }
-}
+  }
+  

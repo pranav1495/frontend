@@ -1,4 +1,3 @@
-/* Login & Register Common Styles */
 .login-page, .register-page {
   display: flex;
   flex-direction: column;
@@ -57,15 +56,11 @@ button {
 button:hover {
   background: #1e40af;
 }
-
-/* Error Message */
 .error-text {
   color: red;
   font-size: 14px;
   margin-top: 10px;
 }
-
-/* Forgot Password & Sign-up Links */
 .forgot-password, .login-link {
   margin-top: 15px;
 }
@@ -81,7 +76,7 @@ button:hover {
 }
 
 body {
-  background-color: #f8f9fa; /* Light Grey Background */
+  background-color: #f8f9fa;
 }
 
 .card {

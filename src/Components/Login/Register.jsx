@@ -12,13 +12,9 @@ function Register() {
 
   const [message, setMessage] = useState("");
   const navigate = useNavigate();
-
-  // Handle input change
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
-
-  // Register user
   const handleRegister = async () => {
     setMessage("");
   

@@ -5,18 +5,19 @@ import "./Home.css";
 
 function Home() {
   const navigate = useNavigate();
+  
+  const username = localStorage.getItem("username") || "Guest";
 
-  // Logout function
   const handleLogout = () => {
-    // Clear session storage or authentication token if used
-    localStorage.removeItem("authToken"); // If using JWT
-    navigate("/login"); // Redirect to Login page
+    localStorage.removeItem("authToken");
+    localStorage.removeItem("username"); 
+    navigate("/login"); 
   };
 
   return (
     <>
       <div className="home-container">
-        <div className="greeting-text">Welcome to Park Visits</div>
+        <div className="greeting-text">Hi, Welcome {username}!</div>
 
         <div className="container mt-4">
           <div className="row g-4">
