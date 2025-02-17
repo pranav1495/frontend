@@ -15,7 +15,7 @@ const Footer = () => {
 
           {/* Social Media */}
           <div className="col-md-4 mb-2">
-            <h5>Follow Us</h5>
+            <h5>Follow Me</h5>
             <div className="social-icons">
               <a href="https://www.facebook.com/equizzlearts" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                 <FaFacebook />
