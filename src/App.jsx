@@ -7,6 +7,7 @@ import Login from "./Components/Login/Login";
 import Register from "./Components/Login/Register";
 import Footer from "./Components/Footer/Footer";
 import { Front } from "./Components/Front/Front"; // Import Front.jsx
+import Features from "./Components/Home/Features";
 
 const getAuthStatus = () => localStorage.getItem("isAuthenticated") === "true";
 
@@ -32,6 +33,7 @@ function App() {
         <Route path="/home" element={isAuthenticated ? <Home onLogout={handleLogout} /> : <Navigate to="/login" />} /> 
         <Route path="/login" element={<Login onLogin={() => setIsAuthenticated(true)} />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/features" element={<Features />} />
       </Routes>
 
       {isAuthenticated && <Footer />}
