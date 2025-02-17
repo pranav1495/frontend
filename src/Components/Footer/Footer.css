@@ -1,10 +1,15 @@
 /* Footer Styling */
 .footer {
-  width: 500px;
+  position: fixed; /* Fix it at the bottom */
+  bottom: 0;       /* Place at the bottom of the page */
+  left: 0;         /* Align to the left */
+  width: 100%;     /* Take the full width of the screen */
   background-color: #343a40;
   color: white;
   padding: 10px 0;
   box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  z-index: 999;    /* Ensure it stays on top of other elements */
 }
 
 /* Heading Styles */
@@ -19,27 +24,6 @@
   font-size: 0.9rem;
   color: #ccc;
   margin-bottom: 0;
-}
-
-/* Quick Links */
-.footer .list-unstyled {
-  list-style: none;
-  padding: 0;
-}
-
-.footer .list-unstyled li {
-  margin: 5px 0;
-}
-
-.footer .list-unstyled li a {
-  color: #ffd700;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.footer .list-unstyled li a:hover {
-  color: #fff;
-  text-decoration: underline;
 }
 
 /* Social Icons */
@@ -63,10 +47,6 @@
 
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
-  .footer .row {
-    text-align: center;
-  }
-
   .footer .social-icons a {
     margin: 8px;
     font-size: 1.3rem;
